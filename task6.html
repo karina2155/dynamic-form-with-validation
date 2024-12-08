@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form with Validation</title>
+    <link rel="stylesheet" href="task6css.css">
+    <script src="task6js.js"></script>
+</head>
+<body>
+<form id="dynamicForm">
+    <h1>Register</h1>
+
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+        <div id="firstNameError" class="error-message">First name cannot be blank</div>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+        <div id="lastNameError" class="error-message">Last name cannot be blank</div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email">
+        <div id="emailError" class="error-message">You cannot leave the email blank</div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password">
+        <div id="passwordError" class="error-message">Password must not be blank</div>
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+        <div id="confirmPasswordError" class="error-message">Passwords do not match</div>
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+            <option value="">Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <div id="genderError" class="error-message">Please select your gender</div>
+    </div>
+
+    <div class="form-group">
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms"> I accept the terms and conditions
+        </label>
+        <div id="termsError" class="error-message">You must accept the terms and conditions</div>
+    </div>
+
+    <button type="submit">Submit</button>
+    <div id="formFeedback" class="success"></div>
+</form>
+</body>
+</html>
